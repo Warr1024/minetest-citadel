@@ -28,6 +28,7 @@ minetest.register_node("citadel_core:" .. "acorn", {
 	tiles = { brown, dark_brown },
 	sounds = plantsound,
 	groups = { cracky = 2, breakable = 1, unique = 1 },
+	_citadel_inv_slot = 6,
 	after_place_node = function(pos, placer, itemstack, pointed_thing)
 		pos.y = pos.y - 1
 		if
@@ -57,6 +58,7 @@ minetest.register_node("citadel_core:" .. "big_acorn", {
 	tiles = { brown, dark_brown },
 	sounds = plantsound,
 	groups = { cracky = 2, breakable = 1, unique = 1 },
+	_citadel_inv_slot = 5,
 	after_place_node = function(pos, placer, itemstack, pointed_thing)
 		pos.y = pos.y - 1
 		if
@@ -86,6 +88,7 @@ minetest.register_node("citadel_core:" .. "vine_bud", {
 	sounds = plantsound,
 	walkable = false,
 	groups = { cracky = 2, breakable = 1, unique = 1 },
+	_citadel_inv_slot = 8,
 	after_place_node = function(pos, placer, itemstack, pointed_thing)
 		pos.y = pos.y + 1
 		if
@@ -126,6 +129,7 @@ minetest.register_node("citadel_core:" .. "bamboo_shoot", {
 	tiles = { dark_green },
 	sounds = plantsound,
 	groups = { cracky = 2, breakable = 1, unique = 1 },
+	_citadel_inv_slot = 7,
 	after_place_node = function(pos, placer, itemstack, pointed_thing)
 		pos.y = pos.y - 1
 		if

@@ -12,6 +12,7 @@ minetest.register_craftitem("citadel_core:" .. "foward_stone", {
 	inventory_image = "small_stone.png^(foward_overlay.png^[colorize:black)",
 	sounds = stonesound,
 	stack_max = 1,
+	_citadel_inv_slot = 2,
 	on_use = function(itemstack, user, pointed_thing)
 		if citadel.go_foward() then
 			local inv = user:get_inventory()
@@ -28,6 +29,7 @@ minetest.register_craftitem("citadel_core:" .. "foward_stone_active", {
 	inventory_image = "small_stone.png^foward_overlay.png",
 	sounds = stonesound,
 	stack_max = 1,
+	_citadel_inv_slot = 2,
 })
 minetest.register_node("citadel_core:" .. "foward_stone_node", {
 	description = "fsn",
@@ -42,6 +44,7 @@ minetest.register_node("citadel_core:" .. "foward_stone_node", {
 		type = "wallmounted",
 	},
 	drop = "citadel_core:" .. "foward_stone",
+	_citadel_inv_slot = 2,
 	_on_unique = citadel.unique_item("citadel_core:" .. "foward_stone", "citadel_core:" .. "foward_stone_active"),
 })
 --backward stone
@@ -50,6 +53,7 @@ minetest.register_craftitem("citadel_core:" .. "backward_stone", {
 	inventory_image = "small_stone.png^(backward_overlay.png^[colorize:black)",
 	sounds = stonesound,
 	stack_max = 1,
+	_citadel_inv_slot = 1,
 	on_use = function(itemstack, user, pointed_thing)
 		if citadel.go_backward() then
 			local inv = user:get_inventory()
@@ -66,6 +70,7 @@ minetest.register_craftitem("citadel_core:" .. "backward_stone_active", {
 	inventory_image = "small_stone.png^(backward_overlay.png)",
 	sounds = stonesound,
 	stack_max = 1,
+	_citadel_inv_slot = 1,
 })
 minetest.register_node("citadel_core:" .. "backward_stone_node", {
 	description = "bsn",
@@ -80,6 +85,7 @@ minetest.register_node("citadel_core:" .. "backward_stone_node", {
 		type = "wallmounted",
 	},
 	drop = "citadel_core:" .. "backward_stone",
+	_citadel_inv_slot = 1,
 	_on_unique = citadel.unique_item("citadel_core:" .. "backward_stone", "citadel_core:" .. "backward_stone_active"),
 })
 --unlock stone
@@ -148,6 +154,7 @@ minetest.register_craftitem("citadel_core:" .. "unlock_stone", {
 	inventory_image = "small_stone.png^(unlock.png^[colorize:black)",
 	sounds = stonesound,
 	stack_max = 1,
+	_citadel_inv_slot = 3,
 	on_use = function(itemstack, user, pointed_thing)
 		if pointed_thing.type == "node" and unbar(pointed_thing.under) then
 			local inv = user:get_inventory()
@@ -164,6 +171,7 @@ minetest.register_craftitem("citadel_core:" .. "unlock_stone_active", {
 	inventory_image = "small_stone.png^(unlock.png)",
 	sounds = stonesound,
 	stack_max = 1,
+	_citadel_inv_slot = 3,
 })
 minetest.register_node("citadel_core:" .. "unlock_stone_node", {
 	description = "usn",
@@ -178,6 +186,7 @@ minetest.register_node("citadel_core:" .. "unlock_stone_node", {
 		type = "wallmounted",
 	},
 	drop = "citadel_core:" .. "unlock_stone",
+	_citadel_inv_slot = 3,
 	_on_unique = citadel.unique_item("citadel_core:" .. "unlock_stone", "citadel_core:" .. "unlock_stone_active"),
 })
 
@@ -187,6 +196,7 @@ minetest.register_craftitem("citadel_core:" .. "break_stone", {
 	inventory_image = "small_stone.png^(break.png^[colorize:black)",
 	sounds = stonesound,
 	stack_max = 1,
+	_citadel_inv_slot = 4,
 	on_use = function(itemstack, user, pointed_thing)
 		if
 			pointed_thing.type == "object"
